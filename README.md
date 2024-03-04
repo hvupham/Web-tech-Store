@@ -40,4 +40,5 @@ ng serve
 
 # Responsive
 Able to use on moblie or tablet
+
 <img width="142" alt="image" src="https://github.com/hvupham/Web-tech-Store/assets/141381468/464db924-6453-4071-8408-e1c616642b5f">
