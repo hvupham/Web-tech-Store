@@ -1,0 +1,37 @@
+<div  class=" lg:px-8 lg:py-10 ">
+    <p class="lg:text-2xl lg:font-bold font-semibold text-black">{{title}}</p>
+    <div class="flex flex-wrap justify-center items-center ">
+        <!-- <ng-container *ngFor="let item of products">
+            <app-home-product [product]="item"></app-home-product>
+        </ng-container> -->
+        <div class="partner-container  ">
+
+            <swiper 
+            [breakpoints]="{ 
+                '300': { slidesPerView: 1 } ,
+                '768': { slidesPerView: 2 } ,
+                '1020': { slidesPerView: 4 } ,
+                '1025': { slidesPerView: 4 } ,
+                }"
+                [autoplay]="{
+                    delay: 3500, 
+                    disableOnInteraction: false 
+                }"
+             [navigation]="true" >
+              
+          <ng-template swiperSlide *ngFor="let item of products"> 
+           
+        
+           
+            <app-product-cart [product]="item"></app-product-cart>
+        
+        
+        </ng-template>
+          
+        <!-- <div class="swiper-button-next text-6xl"></div>
+        <div class="swiper-button-prev"></div> -->
+
+
+        </swiper>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+
+<div class=" container mt-10    ">
+    <div>
+
+        <form >
+            <p class="text-center lg:text-xl">Chào mừng bạn đến với TechStore</p>
+            <h1 class="text-center mt-10">Đăng nhập</h1>
+            
+            <div class="flex justify-center flex-col items-center space-y-2 ">
+                <div class="lg:mb-10 mb-5 space-y-5">
+
+                    <div class="lg:space-x-11 lg:block hidden">
+                        <label  for=""> Email</label>
+                        <input  class="input " type="email" placeholder="Email">
+                    </div>
+                    <div class="lg:space-x-11 lg:hidden block">
+                        <label  for="">Nhập Email</label>
+                        <input  class="input " type="email" placeholder="Email">
+                    </div>
+                    <div class="lg:space-x-5 ">
+                        <label >Mật khẩu</label>
+                        <input class="input" type="password" placeholder="Mật khẩu">
+                    </div>
+                </div>
+             
+                <div class="text-center space-y-4 ">
+                 
+
+                        <p class="lg:mt-10">Bạn chưa có tài khoản? <span class="font-bold cursor-pointer hover:scale-110"><a (click)="changeIslogin()">Đăng ký ngay</a> </span></p>
+               
+                    <div class="text-center space-x-3">
+                        <a href="" class="text-3xl "><i class="fab fa-google-plus-square" style="color: #fe0101;"></i></a>
+                        <a href="" class="text-3xl"> <i class="fab fa-facebook-square" style="color: #4e83df;"></i></a>
+                        <a href="" class="text-3xl"><i class="fab fa-instagram-square" style="color: #f05cc8;"></i></a>
+                        <a href="" class="text-3xl"><i class="fab fa-twitter" style="color: #0f5ee6;"></i></a>
+                       
+                    </div>
+                    <button (click)="navigateToHome()" class="btn w-full">Đăng nhập</button>
+                </div>
+                
+            </div>
+        
+        </form>
+    </div>
+   
+</div>

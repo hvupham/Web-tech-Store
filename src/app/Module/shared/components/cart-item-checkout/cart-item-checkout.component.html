@@ -1,0 +1,37 @@
+<div  class="box flex relative">
+    <div class="h-[5rem] w-[5rem] lg:h-[7rem] lg:w-[7rem] lg:mr-10 p-2">
+        <img class="w-full h-full object-cover" [src]="item.imageURL" alt="">
+    </div>
+    <div class="flex flex-col justify-evenly items-start">
+        <p class="font-bold">
+           {{item.title }}
+        </p>
+        <div class="flex lg:justify-around">
+            <div class="flex lg:space-x-5  lg:flex-row flex-col items-start">
+
+                <p class="text-center text-red-600 font-bold ">
+                   {{item.type[0].Capacity.discountedPrice | currency :'VND'}}
+                </p>
+                <div class="flex space-x-2 items-start ">
+
+            
+                <p class="text-center text-current ">
+                    SL : {{item.quantity }}
+                </p>
+                <p class=" text-current ">
+                    Màu: {{item.type[0].ColorType}}
+                  </p>  
+                  <p class=" text-current ">
+                    Bộ nhớ: {{item.type[0].Capacity.Capacity}}
+                  </p>
+                </div>
+            </div>
+        </div>
+        
+       
+    </div>
+ 
+      
+   
+ 
+</div>

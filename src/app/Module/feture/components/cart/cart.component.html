@@ -1,0 +1,65 @@
+<mat-divider></mat-divider>
+<div class="lg:grid grid-cols-3 lg:mx-36 mx-10 py-10 gap-10 mb-24 space-y-7">
+   <div class="lg:col-span-2  ">
+    <div class="flex justify-between text-center items-center">
+        <h2>Giỏ hàng của bạn</h2>
+        <p class="font-light">Sản phẩm đã chọn</p>
+    </div>
+    <ng-container *ngIf="cart && cart.length > 0; else emptyCart">
+        <div  *ngFor="let product of cart; let index =index">
+           
+
+                <app-cart-item [item]="product" [i]="index"></app-cart-item>
+
+          
+        </div>
+    </ng-container>
+    <ng-template #emptyCart>
+        <div class=" flex justify-center text-center ">
+            <div class="space-y-5">
+
+                <img class="w-72 lg:ml-10 text-center" src="https://thegioidongho.netlify.app/static/media/cart_empty_background.7f8b973b8aeb202b078a.webp" alt="">
+              <h2 class="text-3xl "><span class="font-bold">"Không"</span> có gì trong giỏ hàng hết!!!</h2>
+              <div>
+  
+                  <a (click)="handleToProduct()" class="buyBtn pt-10 ">Mua sắm ngay</a>
+              </div>
+            </div>
+          
+        </div>
+      </ng-template>
+   </div>
+   <div class="col-span-1 ">
+        <div class="box-total">
+            <div class="flex justify-around ">
+
+                <h1>Tổng tiền</h1>
+                <p class="text-lg text-red-600 font-bold">
+                
+
+                    {{ totalPrice | currency :'VND'}}   
+                   
+            
+                </p>
+            </div>
+            <p >
+                - ĐỔI HÀNG MIỄN PHÍ - Tại tất cả cửa hàng trong 15 ngày
+            </p>
+            <p>
+                - Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.
+            </p>
+                <div *ngIf="cart ==''; else cartEmpty ">
+
+                    <button disabled (click)="navigateToCheckout()" class="checkout_empty w-full mt-5 p-2">Tiến hành đặt hàng</button>
+                </div>
+                <ng-template #cartEmpty>
+                    <button  (click)="navigateToCheckout()" class="checkout w-full mt-5 p-2">Tiến hành đặt hàng</button>
+                </ng-template>
+           
+        </div>
+        <div class="box-total lg:pt-5 mt-2" style="background-color: #d9edf7;">
+            <p class="font-bold">Chính sách mua hàng</p>
+            <p>Hiện chúng tôi đang áp dụng giao hàng trên toàn quốc</p>
+        </div>
+   </div>
+</div>

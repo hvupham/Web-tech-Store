@@ -1,0 +1,24 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+  }
+.home{
+    margin: 2rem 6rem;
+
+}
+.product-title{
+    width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 0.5em;
+}
+.line-product-title{
+    width: 78%;
+    border: 1px solid #ccc; 
+}

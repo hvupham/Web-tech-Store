@@ -1,0 +1,13 @@
+
+::ng-deep .swiper-button-prev:after,
+::ng-deep .swiper-button-next:after {
+    font-size: 1.5rem;
+    background-color: #faf6f6;
+    color: rgb(66, 55, 55);
+    padding: 0.4rem;
+    border-radius: 0.7rem;
+    
+}
+
+
+/* CSS riêng cho màn hình có độ rộng lớn hơn 768px */

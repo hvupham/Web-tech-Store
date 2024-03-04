@@ -1,0 +1,79 @@
+.search_cart:hover .search-input{
+    opacity: 1;
+    height: 2.5rem;
+    transform: scale(1);
+    display: block;
+}
+.search-input{
+    opacity: 0;
+    height: 0; 
+    display: none;
+    transition: opacity 0.7s ease-in-out, height 0.3s ease-in-out;
+    width: 0px;
+}
+.search-input input {
+
+    padding: 8px;
+    border: none;
+    border: 2px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+  }
+.active{
+    color: rgb(14 165 233);
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(14 165 233) !important;
+}
+.product-slection:hover{
+    text-decoration: none;
+    color: rgb(14 165 233) !important;
+}
+.search_btn:focus{
+    border: none;
+}
+.product{
+    position: relative;
+}
+.hidden-menu{
+    display: none;
+     z-index: 1000;
+}
+.product:hover .hidden-menu{
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.active{
+    color: rgb(14 165 233)
+}
+.active-link {
+    color: rgb(14 165 233)
+    
+   
+  }
+.hta-menu-expanded{
+  
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 20px;
+    background-color: #fff;
+   font-size: 15px;
+
+    background-color: #fff;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    transition: all .5s ease;
+    width: 45%;
+}
+

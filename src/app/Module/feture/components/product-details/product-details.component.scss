@@ -1,0 +1,68 @@
+:host ::ng-deep label{
+    margin-bottom: 0;
+  }
+  ::ng-deep .swiper-button-prev:after,
+  ::ng-deep .swiper-button-next:after {
+      font-size: 1.5rem;
+      background-color: #faf6f6;
+      color: rgb(66, 55, 55);
+      padding: 0.4rem;
+      border-radius: 0.7rem;
+      
+  }
+.color_star{
+    color: #ff9f00;
+    padding-bottom: 2rem;
+}
+
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color: #ff9f00;
+    --mdc-linear-progress-track-color: rgba(63, 81, 181, 0.25);
+}
+.btn_addtocart{
+    background-color: rgb(220 38 38);
+    color: white;
+}
+.btn_addtocart:hover{
+    background-color: #338dbc;
+}
+.input{
+    border: 1px solid #ebebeb;
+    font-size: 16px;
+    margin-top: 5px;
+    padding: 13px 20px;
+   
+    outline: none;
+}
+.checkout{
+    background-color: #338dbc;
+    color: white;
+}
+.SelectOption{
+    background-color: #F8D7DA;
+    color: #000;
+    margin: 8px 0px 0px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.xemthem{
+    background-color: #338dbc;
+    color: white;
+    padding: 5px 10px;
+    
+}
+.xemthem:hover{
+    background-color: #338dbc;
+    color: white;
+    scale: 1.1;
+}
+:host ::ng-deep.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

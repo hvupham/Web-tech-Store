@@ -1,0 +1,57 @@
+<div  class="box flex relative">
+    <div class="h-[5rem] w-[5rem] lg:h-[7rem] lg:w-[7rem] lg:mr-10 p-2">
+        <img class="w-full h-full object-cover" [src]="item.imageURL" alt="">
+    </div>
+    <div class="flex flex-col justify-evenly">
+        <p class="lg:font-bold font-medium pt-3 lg:py-3">
+           {{item.title }}
+        </p>
+        <div class="flex ">
+            <div class="flex lg:gap-5 lg:flex-row flex-col">
+
+                <p class=" lg:text-center text-red-600 font-bold">
+                   {{item.type[0].Capacity.discountedPrice | currency :'VND'}}
+                </p>
+                <!-- <p class="text-center text-current line-through hidden lg:block">
+                    {{item.price | currency :'VND'}}
+                </p> -->
+                <div class="flex gap-2 ">
+
+                  <p class="flex">
+                    Bộ nhớ: {{item.type[0].Capacity.Capacity}}
+                  </p>
+                  <p class="flex">
+                    Màu: {{item.type[0].ColorType}}
+                  </p>
+                </div>
+            </div>
+        </div>
+        <div class="lg:absolute lg:bottom-5 lg:right-5 flex justify-end pb-3 items-center" >
+          <div>
+            <button class="lg:text-xs"mat-mini-fab color="Link"  (click)="updateItem(-1)">
+              <mat-icon >remove</mat-icon>
+            </button>
+          </div>
+          <span class="px-5 py-1 lg:text-lg text-lg">{{ item.quantity }}</span>
+          <div class="example-button-container">
+            <button class="text-xs" mat-mini-fab color="Link" [disabled]="false" (click)="updateItem(1)">
+              <mat-icon >add </mat-icon>
+            </button>
+          </div>
+        </div>
+       
+    </div>
+  
+      
+   
+    <div class="absolute lg:left-8 left-6 lg:top-2 top-1">
+        <div class="example-button-container ">
+  
+            <button
+            (click)="removeCart()"
+             style="font-size: 2rem; border: 1px solid; background-color: red; color: white; " class="rounded-lg  px-1">
+              <span>-</span>
+            </button>
+        </div>
+      </div>
+</div>

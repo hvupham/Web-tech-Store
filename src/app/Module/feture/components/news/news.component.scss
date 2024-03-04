@@ -1,0 +1,11 @@
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .blinking-img {
+    animation: blink 1s infinite; /* 1s là thời gian một chu kỳ, infinite để lặp vô hạn */
+  }
+  
+  

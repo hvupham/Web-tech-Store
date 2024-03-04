@@ -1,0 +1,33 @@
+.active{
+    color: rgb(14 165 233)
+}
+.xemthem{
+    background-color: #646565;
+    color: white;
+    padding: 5px 10px;
+}
+.ngx-pagination .pagination-previous a:before, .ngx-pagination .pagination-previous.disabled:before {
+    content: "trước";
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+.btn{
+    border:solid 1px #ccc;
+    padding: 3px 14px;
+    border-radius: 10px;
+}
+.addThis_listSharing .addThis_item .addThis_item--icon {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.11);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}

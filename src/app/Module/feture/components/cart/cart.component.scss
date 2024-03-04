@@ -1,0 +1,26 @@
+.box-total{
+    border: 1px solid #ebebeb;
+    padding: 15px;
+}
+.checkout{
+    background-color: rgb(220 38 38);
+    color: white;
+}
+.checkout:hover{
+    background-color: #338dbc;
+}
+.buyBtn{
+    background-color: #fff;
+    border: 1px solid #080808;
+    border-radius: 5px;
+    color: #080808;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 12px 24px;
+    outline: none;
+}
+.checkout_empty{
+    background-color: rgb(70, 69, 69);
+    color: white;
+}
+

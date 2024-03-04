@@ -1,0 +1,75 @@
+<div class="flex justify-around lg:items-center  relative max-w-screen-2xl  ">
+<!--    
+        <p class="font-bold text-3xl ml-20 cursor-pointer hidden lg:block lg:basis-1" (click)="navigateToHome()">Tech Store</p> -->
+       
+        <div class="lg:hidden pb-3" >
+            <svg id="toggleMenuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+              </svg>
+              
+        </div>
+        
+        <img (click)="navigateToHome()" class="lg:mt-[-1.5rem] lg:h-32  cursor-pointer hidden lg:flex  animate-slideDown" src="data:image/png;base64,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" alt="">
+        
+        <div id="toggelMenu" class="lg:text-center pb-3 space-x-2 hidden    lg:flex lg:flex-row  space-y-2 lg:space-y-0  ">
+            <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" class="lg:text-lg text-base font-bold pr-2 pl-2 lg:mt-0 mt-2"  >TRANG CHỦ</a>
+            <a  class="lg:text-lg text-base font-bold pr-2 product"   [matMenuTriggerFor]="menu"
+           
+            > SẢN PHẨM 
+            <i class=" fas fa-angle-down "></i>
+            
+            </a>
+            <a routerLink="/news" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" class="lg:text-lg text-base font-bold pr-2" >TIN TỨC</a>
+        
+        
+            <a  routerLink="/contact" routerLinkActive="active-link"  class="lg:text-lg text-base font-bold pr-2" >LIÊN HỆ</a>
+        </div>
+        
+        <div class=" flex " >
+            <div class="  search_cart px-3 lg:relative">
+
+               
+              <div class="lg:flex lg:flex-row lg:flex-row-reverse ">
+
+               
+                  <div class="hover:text-sky-500 font-bold text-black lg:text-base   flex justify-end search_btn cursor-pointer mb-5">
+                        <mat-icon class=" text-xl " >search_cart</mat-icon>
+                      </div>
+                    </div >
+                    
+                    <div class="search-input right-52 absolute lg:bottom-2  lg:right-56  z-50  " >
+                      <input  class="lg:mt-0 mt-3 mr-2"  type="text" placeholder="Tìm kiếm">
+                 
+                  </div>
+            </div>
+            <div class=" hidden lg:block lg:pr-3">|</div>
+    
+            <p  class=" hover:text-sky-500 font-bold  text-black lg:text-base flex  cursor-pointer " (click)="navigateToCart()">
+                <mat-icon class=" text-xl " >shopping_cart</mat-icon>
+            </p>
+            <div class="lg:px-2 hidden lg:block">|</div>
+            <button *ngIf="true" mat-raised-button class="lg:mt-[-0.5rem] mt-[-0.3rem] ml-3" (click)="HandleLogin()" ><i class="fas fa-user"></i></button>
+            
+            <button *ngIf="false" class="flex font-bold text-lg" [matMenuTriggerFor]="user">
+                <span class="pr-1">Anh </span>
+                    <img class="w-7 h-7" src="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_640.png" alt="">
+                </button>
+                <mat-menu #user="matMenu" class="absolute top-[-1rem]">
+                    <button mat-menu-item>Tài Khoản</button>
+                    <button mat-menu-item>Đơn Mua</button>
+                    <button mat-menu-item>Đăng xuất</button>
+                  </mat-menu>
+        </div>
+       
+</div>
+<hr style="background-color: #05c3ff; height: 1.5px;" class="lg:hidden text-center">
+<!-- <img (click)="navigateToHome()" class=" h-20 m-auto  cursor-pointer lg:hidden   animate-slideDown" src="data:image/png;base64,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" alt=""> -->
+<mat-menu  #menu="matMenu"  class="w-32 ">
+  <button   mat-menu-item class="border-bottom product-slection" routerLinkActive="active-link"  (click)="handleToProduct('iphone')">Iphone</button>
+  <button mat-menu-item class="border-bottom product-slection" (click)="handleToProduct('samsung')">SamSung</button>
+  <button mat-menu-item class="border-bottom product-slection" (click)="handleToProduct('vivo')">Vivo</button>
+  <button mat-menu-item class="product-slection" (click)="handleToProduct('oppo')">Oppo</button>
+</mat-menu>
+
+
+

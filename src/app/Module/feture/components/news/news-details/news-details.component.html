@@ -1,0 +1,65 @@
+<mat-divider></mat-divider>
+<div class="lg:mx-32 mx-8 py-8 lg:grid grid-cols-7 gap-10">
+    <div class="col-span-5 news">
+        
+        <ng-container *ngFor="let new of news">
+            <div  *ngIf="Idnews==new.id">
+                <h1 style="font-weight: bold;" class="font-bold text-3xl">
+                    {{new.title}}
+                   
+                </h1>
+                <p class=" text-lg">
+                    {{new.sub_title}}
+                </p>
+                <div *ngFor="let content of new.content">
+                    <h2 style="font-weight: 600;">{{content.content_title}}</h2>
+                    <p class="text-lg " [innerHTML]="content.content_sub"></p>
+                    <div *ngIf="content.img!=null" class="py-3 flex justify-center">
+    
+                        <img class=" sm:w-3/4 lg:h-96 w-full  object-contain" [src]="content.img" alt="">
+                    </div>
+                </div>
+    
+            </div>
+        </ng-container>
+    </div>
+    <div class="col-span-2 lg:block hidden">
+        <p style="font-weight: bold;"> Sản phẩm mới </p>
+        <mat-divider></mat-divider>
+        <div >
+            <div (click)="navigateToProductsIphone()" class=" p-4 grid grid-cols-3 gap-5 cursor-pointer">
+                <img class="col-span-1" src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/9/14//638302786719056580_ip-15-pro-dd.jpg" alt="">
+               <div class="col-span-2">
+                <h3>iPhone 15 Pro 128GB</h3>
+                <p class="text-sky-500">50 bài viết</p>
+               </div>
+            </div>
+            <mat-divider></mat-divider>
+            <div (click)="navigateToProductsIphone()" class=" p-4 grid grid-cols-3 gap-5 cursor-pointer">
+                <img class="col-span-1" src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/9/13//638301715320061468_iphone-15-dd.jpg" alt="">
+               <div class="col-span-2">
+                <h3>iPhone 15 128GB</h3>
+                <p class="text-sky-500">85 bài viết</p>
+               </div>
+            </div>
+            <mat-divider></mat-divider>
+            <div (click)="navigateToProductsSamsung()" class="grid grid-cols-3 p-4 gap-5 cursor-pointer">
+                <img class="col-span-1" src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/8/28//638288178412655978_samsung-galaxy-z-flip5-xanh-dd-tragop.jpg" alt="">
+               <div class="col-span-2">
+                <h3>Samsung Galaxy Z Flip5 5G </h3>
+                <p class="text-sky-500">75 bài viết</p>
+               </div>
+            </div>
+            <mat-divider></mat-divider>
+            <div (click)="navigateToProductsOppo()" class="grid grid-cols-3 p-4 gap-5 cursor-pointer">
+                <img class="col-span-1" src="https://images.fpt.shop/unsafe/fit-in/80x80/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/10/12//638327122312902566_oppo-find-n3-flip-5g-den-dd.jpg" alt="">
+               <div class="col-span-2">
+                <h3>
+                    OPPO Find N3 Flip 5G</h3>
+                <p class="text-sky-500">14 bài viết</p>
+               </div>
+            </div>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+</div>
