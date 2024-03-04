@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 #  Getting Started with Angular
 git 
+<img width="142" alt="image" src="https://github.com/hvupham/Web-tech-Store/assets/141381468/464db924-6453-4071-8408-e1c616642b5f">
