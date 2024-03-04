@@ -26,7 +26,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+# Clone and run
+(in Terminal)
+git clone https://github.com/hvupham/Web-tech-Store.git
 
-#  Getting Started with Angular
-git 
+cd Web-tech-Store
+
+npm i
+
+npm install -D tailwindcss postcss autoprefixer
+
+ng serve
+
+# Responsive
+Able to use on moblie or tablet
 <img width="142" alt="image" src="https://github.com/hvupham/Web-tech-Store/assets/141381468/464db924-6453-4071-8408-e1c616642b5f">
