@@ -3,7 +3,7 @@
 
     <div *ngIf="item.id==id">
         <div class="0-5 lg:px-10 mt-2">
-            <p class="lg:text-xl font-normal px-20">
+            <p style="cursor: pointer;" class="lg:text-xl font-normal px-20">
                 Product > {{item.brand}} <span class="lg:text-xl active"> > {{item.title}}</span>
             </p>
             <section class=" product_details  lg:grid  lg:grid-cols-2 2xl:grid-cols-3 lg:gap-10  pb-10 px-5 lg:px-20">
@@ -39,23 +39,6 @@
                       
                     </swiper>
                       </div>
-                      <!-- <swiper [slidesPerView]="1"
-                  
-                          [autoplay]="{
-                              delay: 3500, 
-                              disableOnInteraction: false 
-                          }"
-                       [navigation]="true" >
-                        
-                    <ng-template swiperSlide *ngFor="let i of item.arrImg"> 
-                     
-                  
-          
-                        <img [src]="i" alt="" cla >
-                  
-                  
-                  </ng-template>
-                </swiper> -->
                 </div>
                 <div class="lg:col-span-1 2xl:col-span-1">
                     <div>

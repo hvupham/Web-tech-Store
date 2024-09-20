@@ -17,11 +17,13 @@ import { ProvinceService } from './services/province-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from './Module/auth/auth.module';
+import { AdminComponent } from './Module/admin/admin/admin.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    AdminComponent,
    
     
     
