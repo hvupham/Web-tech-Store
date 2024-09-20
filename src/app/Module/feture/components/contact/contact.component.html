@@ -1,87 +1,71 @@
-  <mat-divider></mat-divider>
-  <div  style="background-color: #f3f3f3;" class=" py-10">
-    
-    <div class=" lg:mx-48 mx-5 bg-white ">
-       
-        <div class="mx-10 py-5">
-
-            <p class="lg:text-2xl text-lg font-medium">Địa chỉ của chúng tôi </p>
-          
-        </div>
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
-
-            <div class="flex space-x-3  ml-10 pb-5">
-                <div>
-                    <i class="fas fa-map-marker-alt lg:text-2xl text-xl "></i>
-                </div>
-                <div>
-                    <p class=" font-medium">Địa chỉ</p>
-                    <p> P.Linh Trung, Tp.Thủ Đức, Tp HCM</p>
-                </div>
-    
-            </div>
-         
-                <div class="flex space-x-3 ml-10 lg:ml-0  pb-5">
-                    <div>
-                        <i class="fas fa-phone lg:text-2xl text-xl "></i>
-                    </div>
-                    <div>
-                        <p class=" font-medium">Số điện thoại</p>
-                        <p>(028) 333 55555</p>
-                    </div>
-        
-                </div>
-                <div class="flex space-x-3 ml-10 lg:ml-0 mr-10 pb-5">
-                    <div>
-                        <i class="fas fa-envelope lg:text-2xl text-xl"></i>
-                    </div>
-                    <div>
-                        <p class=" font-medium">Email</p>
-                        <p>techstore@gmail.com</p>
-                    </div>
-        
-                </div>
-        </div>
-        
-       
+<mat-divider></mat-divider>
+<div style="background-color: #f3f3f3;" class="py-10">
+  <div class="lg:mx-48 mx-5 bg-white">
+    <div class="mx-10 py-5">
+      <p class="lg:text-2xl text-lg font-medium">Our Address</p>
     </div>
-    <div style="background-color: #f3f3f3;" class=" py-10 ">
-       <div class="lg:mx-48 mx-5 px-10 bg-white py-5 relative">
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+      <div class="flex space-x-3 ml-10 pb-5">
         <div>
-
-            <p class="lg:text-2xl text-lg font-medium">Gửi thắc mắc cho chúng tôi</p>
-            <p>Nếu bạn có thắc mắc gì, có thể gửi yêu cầu cho chúng tôi, và chúng tôi sẽ liên lạc lại với bạn sớm nhất có thể.</p>
+          <i class="fas fa-map-marker-alt lg:text-2xl text-xl"></i>
         </div>
-      
-            <div class="grid grid-cols-1 gap-x-5 sm:grid-cols-4  space-y-4">
+        <div>
+          <p class="font-medium">Address</p>
+          <p>P. Linh Trung, Thu Duc City, HCM City</p>
+        </div>
+      </div>
 
-                <div class="col-span-4 ">
-    
-                   <label for=""> Họ và tên</label>
-                   <input class="input w-full" type="text" placeholder="Họ và tên">
-                </div>
-                <div class="lg:col-span-2 flex flex-col col-span-4">
-                    
-                   <label for="">Email</label>
-                   <input class="input" type="email" placeholder="Email">
-                </div>
-                <div class="lg:col-span-2 flex flex-col col-span-4">
-    
-                    <label for="">Điện thoại</label>
-                   <input class="input" type="email" placeholder="Số điện thoại">
-                </div>
-                <div class="col-span-4 flex flex-col">
-                    <label for="">Nội dung</label>
-                    <textarea class="input" name="" id="" cols="30"  rows="5" placeholder="Nhập nội dung"></textarea>
-                    
-                </div>
-               
-                <div class="col-span-4 lg:flex lg:justify-end ">
-                    <button (click)="HandleContact()" class="bg-black btn-send color text-white p-3 mt-5 ml-auto rounded-md w-full lg:w-40">Gửi cho chúng tôi</button>
-                </div>
-            </div>
-       </div>
+      <div class="flex space-x-3 ml-10 lg:ml-0 pb-5">
+        <div>
+          <i class="fas fa-phone lg:text-2xl text-xl"></i>
+        </div>
+        <div>
+          <p class="font-medium">Phone Number</p>
+          <p>(028) 333 55555</p>
+        </div>
+      </div>
+      <div class="flex space-x-3 ml-10 lg:ml-0 mr-10 pb-5">
+        <div>
+          <i class="fas fa-envelope lg:text-2xl text-xl"></i>
+        </div>
+        <div>
+          <p class="font-medium">Email</p>
+          <p>techstoregmail.com</p>
+        </div>
+      </div>
     </div>
   </div>
+  <div style="background-color: #f3f3f3;" class="py-10">
+    <div class="lg:mx-48 mx-5 px-10 bg-white py-5 relative">
+      <div>
+        <p class="lg:text-2xl text-lg font-medium">Send Us Your Inquiry</p>
+        <p>If you have any questions, you can send us a request, and we will get back to you as soon as possible.</p>
+      </div>
 
+      <div class="grid grid-cols-1 gap-x-5 sm:grid-cols-4 space-y-4">
+        <div class="col-span-4">
+          <label for="">Full Name</label>
+          <input class="input w-full" type="text" placeholder="Full Name">
+        </div>
+        <div class="lg:col-span-2 flex flex-col col-span-4">
+          <label for="">Email</label>
+          <input class="input" type="email" placeholder="Email">
+        </div>
+        <div class="lg:col-span-2 flex flex-col col-span-4">
+          <label for="">Phone</label>
+          <input class="input" type="text" placeholder="Phone Number">
+        </div>
+        <div class="col-span-4 flex flex-col">
+          <label for="">Message</label>
+          <textarea class="input" name="" id="" cols="30" rows="5" placeholder="Enter your message"></textarea>
+        </div>
 
+        <div class="col-span-4 lg:flex lg:justify-end">
+          <button (click)="HandleContact()" class="bg-black btn-send text-white p-3 mt-5 ml-auto rounded-md w-full lg:w-40">
+            Send to Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

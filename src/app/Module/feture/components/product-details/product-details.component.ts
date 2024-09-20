@@ -2,9 +2,6 @@ import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/co
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { dataProduct } from 'src/Data/data';
-
-
-import { AuthComponent } from 'src/app/Module/auth/auth.component';
 import { Product,ProductType } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 

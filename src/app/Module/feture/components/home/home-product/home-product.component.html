@@ -1,74 +1,29 @@
-<!-- <div class="relative box hover:scale-110 duration-500 cursor-pointer flex flex-col items-center rounded-lg m-3 border-2 ">
-    <div class="h-52 w-48 pt-4">
-        <img [src]="product.imageURL" alt="">
+<div>
+    <div>
+      <div class="flex items-center product-home gap-3 pt-10 mb-2 w-full">
+        <div class="lg:text-2xl font-bold product-home-heading">
+          PRODUCTS BY CATEGORY
+        </div>
+        <hr class="line-product-title">
+      </div>
     </div>
-    <div class="p-4">
-        <p class="mt-2 text-xs font-bold text-black">{{product.title}}</p>
-        <div class="flex flex-wrap justify-around ">
-            <p class="text-center text-red-600 font-bold">{{product.discountedPrice}}</p>
-            <ng-container *ngIf="product.discountPersent !== null && product.discountPersent !== ''">
-                <p class="text-center text-current line-through">{{product.price}}</p>
-            </ng-container>
-           
-        </div>
-    </div>
-    <ng-container *ngIf="product.discountPersent !== null && product.discountPersent !== ''">
-        <div class="absolute" style="height: 31px;
-        left: -15px;
-        position: absolute;
-        top: -10px;
-        width: 4rem;
-        background: url('https://img.freepik.com/free-vector/banner-design-white-background_1308-95008.jpg?size=626&ext=jpg');
-        background-size: cover; /* hoặc contain tùy theo mong muốn */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 12px;
-        font-weight: 700;
-        margin: 5px 0 0;
-        text-align: center;">
-            <p style="margin-top: 1.5rem;  color: #fff;">giảm {{product.discountPersent}} </p>
-        </div>
-    </ng-container>
-</div>
-<swiper [slidesPerView]="4"  >
-        
-    <ng-template swiperSlide > <img [src]="product.imageURL" alt="" class="modifier-img w-40"></ng-template>
-   
-  </swiper> -->
-  <div >
-    <div >
-        
-        <div class="flex items-center product-home gap-3 pt-10 mb-2 w-full">
-
-            <div class="lg:text-2xl font-bold  product-home-heading  ">
-                SẢN PHẨM THEO DANH MỤC
-              </div>
-              <hr class="line-product-title  ">
-    
-          </div>
-        </div>
-        <p class="font-extralight">Bộ sưu tập các thương hiện nổi tiếng lớn trên Thế Giới</p>
-            <!-- <ng-container *ngFor="let product of dataProduct ">
-                <div *ngIf="product.brand =='iphone'">
-                    <app-home-product-slider [title]="'iphone'" [products]="iphone"></app-home-product-slider>
-                </div>
-            </ng-container> -->
-    
-
-
-    <app-home-product-slider [title]="'IPHONE'" [products]="iphone"></app-home-product-slider>
-    
-    <app-home-product-slider [title]="'SAMSUNG'" [products]="samsung"></app-home-product-slider>
-   
-     <app-home-product-slider [title]="'VIVO'" [products]="vivo"></app-home-product-slider>
-    
-   <app-home-product-slider [title]="'OPPO'" [products]="oppo"></app-home-product-slider>
-   
-     
-</div>
-
-
+    <p class="font-extralight">A collection of famous brands from around the world</p>
   
+    <!-- Uncomment and modify the below code if needed to filter products by brand -->
+    <!-- 
+    <ng-container *ngFor="let product of dataProduct">
+        <div *ngIf="product.brand == 'iphone'">
+            <app-home-product-slider [title]="'IPHONE'" [products]="iphone"></app-home-product-slider>
+        </div>
+    </ng-container> 
+    -->
+  
+    <app-home-product-slider [title]="'IPHONE'" [products]="iphone"></app-home-product-slider>
+  
+    <app-home-product-slider [title]="'SAMSUNG'" [products]="samsung"></app-home-product-slider>
+  
+    <app-home-product-slider [title]="'VIVO'" [products]="vivo"></app-home-product-slider>
+  
+    <app-home-product-slider [title]="'OPPO'" [products]="oppo"></app-home-product-slider>
+  </div>
   
