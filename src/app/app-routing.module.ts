@@ -11,7 +11,7 @@ import { NewsDetailsComponent } from './Module/feture/components/news/news-detai
 import { ContactComponent } from './Module/feture/components/contact/contact.component';
 import { SigninComponent } from './Module/auth/signin/signin.component';
 import { SignupComponent } from './Module/auth/signup/signup.component';
-
+import { AdminComponent } from './Module/admin/admin.component';
 const routes: Routes = [
   { path: '', component:HomeComponent},
   {path: 'checkout/payment/:id', component:PaymentComponent},
@@ -24,6 +24,11 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'singin', component:SigninComponent},
   {path:'singup', component:SignupComponent},
+  { 
+    path: 'admin', 
+    component: AdminComponent, 
+    // canActivate:[AdminGuardFn] 
+  },  
 ];
 
 @NgModule({
