@@ -1,160 +1,135 @@
-
 <mat-divider></mat-divider>
-<div class="lg:grid lg:grid-cols-2 gap-3  lg:mx-32 py-10 pb-20">
-    <div class="col-span-1 mx-6">
-        <h1>Thông tin sản phẩm</h1>
-        <div class="text-center">
-            <ng-container *ngIf="cart && cart.length > 0;">
-                <div  *ngFor="let product of cart; let index =index">
-                   
-        
-                        <app-cart-item-checkout [item]="product" [i]="index"></app-cart-item-checkout>
-        
-                  
-                </div>
-            </ng-container>
+<div class="lg:grid lg:grid-cols-2 gap-3 lg:mx-32 py-10 pb-20">
+  <div class="col-span-1 mx-6">
+    <h1>Product Information</h1>
+    <div class="text-center">
+      <ng-container *ngIf="cart && cart.length > 0;">
+        <div *ngFor="let product of cart; let index = index">
+          <app-cart-item-checkout [item]="product" [i]="index"></app-cart-item-checkout>
         </div>
-        <mat-divider></mat-divider>
-        <div class="py-5">
-            <input class="voucher__input mr-2" type="text" placeholder="Mã giảm giá">
-            <button disabled class="voucher__button">Sử dụng</button>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="py-5 mr-5">
-            <div class="flex justify-between pb-2">
-                <p>Tạm tính</p>
-                <p class=" text-red-600 font-bold">{{ totalPrice | currency :'VND'}}   </p>
-            </div>
-            <div class="flex justify-between">
-                <p>Phí vận chuyển</p>
-                <p class="  font-bold">0đ   </p>
-            </div>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="flex justify-between pt-5 mr-5">
-            <h2>Tổng cộng</h2>
-            <h2 class=" text-red-600 font-bold">
-                {{ totalPrice | currency :'VND'}}   
-            </h2>
-        </div>
+      </ng-container>
     </div>
-    <div class="lg:col-span-1">
-        <h1 class="px-5">Thông tin giao hàng</h1>
-        <form [formGroup]="myform">
-            <div class="lg:grid grid-cols-1 gap-x-5 sm:grid-cols-4 mx-5 space-y-5">
-
-                <!-- Hiển thị thông báo nếu có lỗi -->
-                    <div class="col-span-4" *ngIf="errorMessages.length > 0" >
-                        <ul class=" space-y-2">
-                        <li class="alert " *ngFor="let message of errorMessages">{{ message }}</li>
-                        </ul>
-                    </div>
-  
-                <div class="col-span-4 space-y-2">
-    
-                   
-                    <label for=""> Họ và tên</label>
-                        <input
-                        [ngClass]="{'is-invalid': myform.get('firstname')?.invalid && myform.get('firstname')?.touched}"
-                        name="firstname"
-                        class="input w-full" formControlName="firstname"  value="" type="text" placeholder="Họ và tên">
-                        <div *ngIf="myform.get('firstname')?.invalid && myform.get('firstname')?.touched">
-                            <div *ngIf="myform.get('firstname')?.errors?.['required']" class="alert ">
-                                Không được bỏ trống 
-                            </div>
-                            <div *ngIf="myform.get('firstname')?.errors?.['minlength']" class="alert ">
-                                Phải nhiều hơn 5 kí tự
-                            </div>
-                            
-                          
-                        </div>
-                </div>
-               
-                <div class="col-span-2">
-                    <label for="">Email</label>
-                    <input
-                    [ngClass]="{'is-invalid': myform.get('email')?.invalid && myform.get('email')?.touched}"
-                    name="email"
-                    class="input w-full" formControlName="email"  value="" type="text" placeholder="21521818@gmail.com">
-                    <div *ngIf="myform.get('email')?.invalid && myform.get('email')?.touched">
-                        <div *ngIf="myform.get('email')?.errors?.['required']" class="alert ">
-                            Không được bỏ trống 
-                        </div>
-                        <div *ngIf="myform.get('email')?.errors?.['email']" class="alert ">
-                            email không đúng dạng
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-2">
-    
-                    <label for="">Số điện thoại</label>
-                    <input
-                    [ngClass]="{'is-invalid': myform.get('number')?.invalid && myform.get('number')?.touched}"
-                    name="number"
-                    class="input w-full" formControlName="number"  value="" type="text" placeholder="0388754xxx">
-                    <div *ngIf="myform.get('number')?.invalid && myform.get('number')?.touched">
-                        <div *ngIf="myform.get('number')?.errors?.['required']" class="alert ">
-                            Không được bỏ trống 
-                        </div>
-                        <div *ngIf="myform.get('number')?.errors?.['pattern']" class="alert ">
-                            số điện thoại không đúng
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-2"  >
-                   
-                  
-                    
-                    <label for="">Tỉnh / Thành Phố</label>
-                    <select appearance="fill" class="input w-full" id="province" (change)="onProvinceChange()" formControlName="provinces">
-                        <option [ngValue]="null" [disabled]="true" >Tỉnh/Thành Phố</option>
-                        <option *ngFor="let province of provinces" [value]="province.code">{{ province.name }}</option>
-                      </select>
-                      
-                   
-                </div>
-                <div class="col-span-2 lg:w-full">
-                    <label for=""> Quận / Huyện</label>
-                    <select appearance="fill" class="input w-full" id="district" (change)="onDistrictChange()" formControlName="district">
-                        <option [ngValue]="null"   >Quận/Huyện</option>
-                        <option *ngFor="let district of districts" [value]="district.code">{{ district.name }}</option>
-                      </select>
-
-                </div>
-                <div class="col-span-2">
-                    <label for=""> Xã / Phường</label>
-                    <select     class="input w-full" id="ward"  formControlName="ward">
-                        <option [ngValue]="null" [disabled]="true" >Xã/ Phường</option>
-                        <option *ngFor="let ward of wards" [value]="ward.code">{{ ward.name }}</option>
-                      </select>
-              
-                </div>
-                <div class="col-span-2">
-                    <label for="">Địa chỉ nhà</label>
-                    <input
-                    [ngClass]="{'is-invalid': myform.get('streetAddress')?.invalid && myform.get('streetAddress')?.touched}"
-                    name="streetAddress"
-                    class="input w-full" formControlName="streetAddress"  value="" type="text" placeholder="ĐH CNTT">
-                    <div *ngIf="myform.get('streetAddress')?.invalid && myform.get('streetAddress')?.touched">
-                        <div *ngIf="myform.get('streetAddress')?.errors?.['required']" class="alert ">
-                            Không được bỏ trống 
-                        </div>
-                        <div *ngIf="myform.get('streetAddress')?.errors?.['minlength']" class="alert ">
-                            Phải nhiều hơn 5 kí tự
-                        </div>
-                        
-                      
-                    </div>
-                 
-                </div>
-            </div>
-        </form>
-        <div class="flex lg:flex-row flex-col mx-6 pt-5 justify-end items-end">
-            <!-- <a (click)="navigatoCart()" class="font-semibold cursor-pointer" style="color: #338dbc;"> Giỏ hàng</a> -->
-            <button (click)="checkout()" class="checkout lg:w-28 w-full lg:mt-0 p-3 mt-5 rounded-md justify-end items-end"> Đặt hàng</button>
-        </div>
+    <mat-divider></mat-divider>
+    <div class="py-5">
+      <input class="voucher__input mr-2" type="text" placeholder="Discount Code">
+      <button disabled class="voucher__button">Apply</button>
     </div>
-   
+    <mat-divider></mat-divider>
+    <div class="py-5 mr-5">
+      <div class="flex justify-between pb-2">
+        <p>Subtotal</p>
+        <p class="text-red-600 font-bold">{{ totalPrice | currency :'VND' }}</p>
+      </div>
+      <div class="flex justify-between">
+        <p>Shipping Fee</p>
+        <p class="font-bold">0đ</p>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="flex justify-between pt-5 mr-5">
+      <h2>Total</h2>
+      <h2 class="text-red-600 font-bold">{{ totalPrice | currency :'VND' }}</h2>
+    </div>
+  </div>
+  <div class="lg:col-span-1">
+    <h1 class="px-5">Shipping Information</h1>
+    <form [formGroup]="myform">
+      <div class="lg:grid grid-cols-1 gap-x-5 sm:grid-cols-4 mx-5 space-y-5">
+        <!-- Display error messages if any -->
+        <div class="col-span-4" *ngIf="errorMessages.length > 0">
+          <ul class="space-y-2">
+            <li class="alert" *ngFor="let message of errorMessages">{{ message }}</li>
+          </ul>
+        </div>
+
+        <div class="col-span-4 space-y-2">
+          <label for="">Full Name</label>
+          <input
+            [ngClass]="{'is-invalid': myform.get('firstname')?.invalid && myform.get('firstname')?.touched}"
+            name="firstname"
+            class="input w-full" formControlName="firstname" value="" type="text" placeholder="Full Name">
+          <div *ngIf="myform.get('firstname')?.invalid && myform.get('firstname')?.touched">
+            <div *ngIf="myform.get('firstname')?.errors?.['required']" class="alert">
+              This field is required
+            </div>
+            <div *ngIf="myform.get('firstname')?.errors?.['minlength']" class="alert">
+              Must be more than 5 characters
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-2">
+          <label for="">Email</label>
+          <input
+            [ngClass]="{'is-invalid': myform.get('email')?.invalid && myform.get('email')?.touched}"
+            name="email"
+            class="input w-full" formControlName="email" value="" type="text" placeholder="21521818@gmail.com">
+          <div *ngIf="myform.get('email')?.invalid && myform.get('email')?.touched">
+            <div *ngIf="myform.get('email')?.errors?.['required']" class="alert">
+              This field is required
+            </div>
+            <div *ngIf="myform.get('email')?.errors?.['email']" class="alert">
+              Invalid email format
+            </div>
+          </div>
+        </div>
+        <div class="col-span-2">
+          <label for="">Phone Number</label>
+          <input
+            [ngClass]="{'is-invalid': myform.get('number')?.invalid && myform.get('number')?.touched}"
+            name="number"
+            class="input w-full" formControlName="number" value="" type="text" placeholder="0388754xxx">
+          <div *ngIf="myform.get('number')?.invalid && myform.get('number')?.touched">
+            <div *ngIf="myform.get('number')?.errors?.['required']" class="alert">
+              This field is required
+            </div>
+            <div *ngIf="myform.get('number')?.errors?.['pattern']" class="alert">
+              Invalid phone number
+            </div>
+          </div>
+        </div>
+        <div class="col-span-2">
+          <label for="">Province / City</label>
+          <select appearance="fill" class="input w-full" id="province" (change)="onProvinceChange()" formControlName="provinces">
+            <option [ngValue]="null" [disabled]="true">Province / City</option>
+            <option *ngFor="let province of provinces" [value]="province.code">{{ province.name }}</option>
+          </select>
+        </div>
+        <div class="col-span-2 lg:w-full">
+          <label for="">District</label>
+          <select appearance="fill" class="input w-full" id="district" (change)="onDistrictChange()" formControlName="district">
+            <option [ngValue]="null">District</option>
+            <option *ngFor="let district of districts" [value]="district.code">{{ district.name }}</option>
+          </select>
+        </div>
+        <div class="col-span-2">
+          <label for="">Ward</label>
+          <select class="input w-full" id="ward" formControlName="ward">
+            <option [ngValue]="null" [disabled]="true">Ward</option>
+            <option *ngFor="let ward of wards" [value]="ward.code">{{ ward.name }}</option>
+          </select>
+        </div>
+        <div class="col-span-2">
+          <label for="">Street Address</label>
+          <input
+            [ngClass]="{'is-invalid': myform.get('streetAddress')?.invalid && myform.get('streetAddress')?.touched}"
+            name="streetAddress"
+            class="input w-full" formControlName="streetAddress" value="" type="text" placeholder="Address">
+          <div *ngIf="myform.get('streetAddress')?.invalid && myform.get('streetAddress')?.touched">
+            <div *ngIf="myform.get('streetAddress')?.errors?.['required']" class="alert">
+              This field is required
+            </div>
+            <div *ngIf="myform.get('streetAddress')?.errors?.['minlength']" class="alert">
+              Must be more than 5 characters
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="flex lg:flex-row flex-col mx-6 pt-5 justify-end items-end">
+      <button (click)="checkout()" class="checkout lg:w-28 w-full lg:mt-0 p-3 mt-5 rounded-md justify-end items-end">
+        Place Order
+      </button>
+    </div>
+  </div>
 </div>
-
-

@@ -1,238 +1,10 @@
-<!-- <div class="0-5 lg:p-10 ">
- 
-    <section class=" product_details lg:grid grid-cols-3 lg:gap-10  pb-10 px-5 lg:px-20">
-        
-        <div class="col-span-2 flex justify-center">
-            
-            <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/t/_/t_m_18.png" alt="">
-        </div>
-        <div class="col-span-1">
-            <div>
-
-                <h2>iPhone 14 Pro Max 128GB | Chính hãng VN/A</h2>
-                <div class="price flex space-x-5">
-
-                    <p class="text-lg text-red-600 font-bold">26.990.000đ</p>
-                    <p class="text-lg text-current line-through font-medium">29.990.000đ</p>
-                    <p class="text-lg text-red-600 font-bold">12%</p>
-                </div>
-          
-                    <p class="font-medium">Ưu đãi đối tác giảm 1.5 triệu khi thanh toán qua UOB, HSBC, VIB, VPBank MasterCard, Standard Chartered (không áp dụng cùng ưu đãi giảm giá trực tiếp) (Xem chi tiết)
-
-                    </p>
-                <div>
-                    <div class="text-lg font-bold m-0">Loại</div>
-                    <div class="mb-2">
-                        <mat-radio-group aria-label="Select an option"
-                        [color]="'primary'"
-                        class="space-x-10"
-                        [(ngModel)]="selectType"
-                        >
-                            <mat-radio-button class="margin-bottom" value="128G"><span>128G</span></mat-radio-button>
-                            <mat-radio-button value="256G"><span>256G</span></mat-radio-button>
-                            <mat-radio-button value="512G"><span>512G</span></mat-radio-button>
-                          </mat-radio-group>
-                    </div>
-                    <div>
-                        <div class="text-lg font-bold m-0">Màu</div>
-                        <div>
-                            <mat-radio-group aria-label="Select an option"
-                            [color]="'primary'"
-                            class="space-x-5"
-                            [(ngModel)]="selectColor"
-                            >
-                                <mat-radio-button  value="Trắng"><span>Trắng</span></mat-radio-button>
-                                <mat-radio-button value="Xanh"><span>Xanh</span></mat-radio-button>
-                                <mat-radio-button value="Đen"><span>Đen</span></mat-radio-button>
-                                <mat-radio-button value="Xám"><span>Xám</span></mat-radio-button>
-                              </mat-radio-group>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <button class="w-full mt-5 btn_addtocart" style="padding: 1.5rem;" (click)="handleAddtoCart()" mat-raised-button >Thêm vào giỏ hàng</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-span-3 text-sm">
-            <h1 style="font-weight: 500;" class="text-xl font-bold  pb-2">Thông tin chi tiết</h1>
-            <div class="ml-4">
-
-                <p>iPhone 14 Pro đem tới trải nghiệm thị giác siêu mượt mà khi sở hữu màn hình Dynamic Island sắc nét cùng công nghệ Super Retina XDR thế hệ mới. Hiệu năng của iPhone 14 Pro 128GB mạnh mẽ với vi xử lý Apple A16 Bionic, giúp ổn định mọi tác vụ. Cụm camera sau 48MP cùng nhiều công nghệ chụp ảnh hiện đại mang tới chất lượng quay chụp ấn tượng, chuẩn nhiếp ảnh chuyên nghiệp.
-    
-                </p>
-                <p>
-                    Nằm trong phân khúc iPhone 14 Series cao cấp nhất hiện nay, iPhone 14 Pro 128GB đã và đang nhận được rất nhiều sự yêu thích từ người tiêu dùng Việt. Thế hệ iPhone mới nhất này thu hút người dùng với kiểu dáng sang trọng, tinh tế từ màn hình Dynamic Island cùng hiệu năng cực đỉnh của chipset Apple A16 Bionic. Với nhiều đột phá mạnh mẽ, iPhone 14 Pro 128GB chắc chắn sẽ là phân khúc smartphone mạnh mẽ, sang trọng top đầu hiện nay mà bạn không nên bỏ qua nhé!
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="Review_product pb-10 px-5 lg:px-20">
-        <h1 style="font-weight: 500;" >Đánh giá của sản phẩm</h1>
-        <div class="grid grid-cols-12 gap-7">
-            <div class="col-span-5 flex flex-col justify-center item-center lg:ml-4">
-               <div>
-               
-                <p class="font-bold">
-                    Hồ Tấn Anh
-                </p>
-                <p>
-                    Sản phẩm tốt lắm shop
-                </p>
-                <div class="start">
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                </div>
-                
-               </div>
-               <div>
-                <p class="font-bold">
-                    Nguyễn Bá Đại
-                </p>
-                <p>
-                    Sản phẩm tốt lắm shop
-                </p>
-                <div class="start">
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star-half-alt color_star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                
-               </div>
-               <div>
-                <p class="font-bold">
-                    Phạm Hoài Vũ
-                </p>
-                <p>
-                    Sản phẩm tốt lắm shop
-                </p>
-                <div class="start">
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                </div>
-                
-               </div>
-               <div>
-                <p class="font-bold">
-                    Phan Thị Cát Tường
-                </p>
-                <p>
-                    Sản phẩm tốt lắm shop
-                </p>
-                <div class="start">
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star color_star"></i>
-                    <i class="fas fa-star-half-alt color_star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                
-               </div>
-            </div>
-            <div class="col-span-7  text-lg">
-                <div class="flex space-x-5  text-lg">
-                    <p class="font-bold " style="color: #ff9f00;">4.2</p>
-                    <div>
-
-                        <i class="fas fa-star color_star"></i>
-                        <i class="fas fa-star color_star"></i>
-                        <i class="fas fa-star color_star"></i>
-                        <i class="fas fa-star color_star"></i>
-                        <i class="fas fa-star-half-alt color_star"></i>
-                    </div>
-                    <p style="color:#0071e3;">1001 đánh giá</p>
-                </div>
-                <div>
-                    <div class="flex space-x-5  ">
-                       
-                        
-                        <div class="space-x-2 flex">
-
-                            <p class="m-0">5</p>
-                             <i class="fas fa-star mt-1"></i>
-                         
-                        </div>
-                        <mat-progress-bar class="mt-2.5" mode="determinate" value="53"></mat-progress-bar>
-                        <p >53%</p>
-                    </div>
-                  
-                    <div class="flex space-x-5  ">
-                       
-                        
-                        <div class="space-x-2 flex">
-
-                            <p class="m-0">4</p>
-                             <i class="fas fa-star mt-1"></i>
-                         
-                        </div>
-                        <mat-progress-bar class="mt-2.5" mode="determinate" value="29"></mat-progress-bar>
-                        <p >29%</p>
-                    </div>
-                    <div class="flex space-x-5  ">
-                       
-                        
-                        <div class="space-x-2 flex">
-
-                            <p class="m-0">3</p>
-                             <i class="fas fa-star mt-1"></i>
-                         
-                        </div>
-                        <mat-progress-bar class="mt-2.5" mode="determinate" value="9"></mat-progress-bar>
-                        <p >9%</p>
-                    </div>
-                    <div class="flex space-x-5  ">
-                       
-                        
-                        <div class="space-x-2 flex">
-
-                            <p class="m-0">2</p>
-                             <i class="fas fa-star mt-1"></i>
-                         
-                        </div>
-                        <mat-progress-bar class="mt-2.5" mode="determinate" value="4"></mat-progress-bar>
-                        <p >4%</p>
-                    </div>
-                    <div class="flex space-x-5  ">
-                       
-                        
-                        <div class="space-x-2 flex">
-
-                            <p class="m-0">1</p>
-                             <i class="fas fa-star mt-1"></i>
-                         
-                        </div>
-                        <mat-progress-bar class="mt-2.5 color-progress-star" mode="determinate" value="6"></mat-progress-bar>
-                        <p >6%</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="related_product pb-10 px-5 lg:px-20">
-        <h1 style="font-weight: 500;" >Sản phẩm liên quan</h1>
-        
-        <div class="flex flex-wrap justify-center">
-            <ng-container *ngFor="let item of iphone">
-                <app-product-cart [product]="item"></app-product-cart>
-            </ng-container>
-        </div>
-    </section>
-</div> -->
 
 <ng-container *ngFor="let item of dataProduct">
 
     <div *ngIf="item.id==id">
         <div class="0-5 lg:px-10 mt-2">
             <p class="lg:text-xl font-normal px-20">
-                Sản Phẩm > {{item.brand}} <span class="lg:text-xl active"> > {{item.title}}</span>
+                Product > {{item.brand}} <span class="lg:text-xl active"> > {{item.title}}</span>
             </p>
             <section class=" product_details  lg:grid  lg:grid-cols-2 2xl:grid-cols-3 lg:gap-10  pb-10 px-5 lg:px-20">
                 
@@ -297,11 +69,11 @@
                             <p class="text-lg text-red-600 font-bold">{{item.discountPersent}}</p>
                         </div>
                   
-                            <p class="font-medium">Ưu đãi đối tác giảm 1.5 triệu khi thanh toán qua UOB, HSBC, VIB, VPBank MasterCard, Standard Chartered (không áp dụng cùng ưu đãi giảm giá trực tiếp) 
+                            <p class="font-medium">Partner offer 1.5 million VND discount when paying via UOB, HSBC, VIB, VPBank, MasterCard, Standard Chartered (not applicable with direct discount) 
         
                             </p>
                         <div>
-                            <div class="lg:text-lg font-bold m-0">Loại</div>
+                            <div class="lg:text-lg font-bold m-0">Type</div>
                             <div class="mb-2">
                                 <mat-radio-group aria-label="Select an option"
                                 [color]="'primary'"
@@ -318,17 +90,17 @@
                                   </mat-radio-group>
                             </div>
                             <div>
-                                <div class="text-lg font-bold m-0">Màu</div>
+                                <div class="text-lg font-bold m-0">Color</div>
                                 <div>
                                     <mat-radio-group aria-label="Select an option"
                                     [color]="'primary'"
                                     class="lg:space-x-5"
                                     [(ngModel)]="selectColor"
                                     >
-                                        <mat-radio-button  value="Trắng"><span>Trắng</span></mat-radio-button>
-                                        <mat-radio-button value="Xanh"><span>Xanh</span></mat-radio-button>
-                                        <mat-radio-button value="Đen"><span>Đen</span></mat-radio-button>
-                                        <mat-radio-button value="Xám"><span>Xám</span></mat-radio-button>
+                                        <mat-radio-button  value="Trắng"><span>White</span></mat-radio-button>
+                                        <mat-radio-button value="Xanh"><span>Blue</span></mat-radio-button>
+                                        <mat-radio-button value="Đen"><span>Black</span></mat-radio-button>
+                                        <mat-radio-button value="Xám"><span>Grey</span></mat-radio-button>
                                       </mat-radio-group>
                                 </div>
                             </div>
@@ -340,29 +112,29 @@
                     </div>
                 </div>
                 <div class="col-span-3 text-sm">
-                    <h1 style="font-weight: 500;" class="lg:text-xl font-bold pb-2 pt-6">Thông tin chi tiết</h1>
+                    <h1 style="font-weight: 500;" class="lg:text-xl font-bold pb-2 pt-6">Details</h1>
                     <div class="ml-4">
         
-                        <p>Điện thoại này đem tới trải nghiệm thị giác siêu mượt mà khi sở hữu màn hình Dynamic Island sắc nét cùng công nghệ Super Retina XDR thế hệ mới. Hiệu năng của nó mạnh mẽ với vi xử lý Apple A16 Bionic, giúp ổn định mọi tác vụ. Cụm camera sau 48MP cùng nhiều công nghệ chụp ảnh hiện đại mang tới chất lượng quay chụp ấn tượng, chuẩn nhiếp ảnh chuyên nghiệp.
+                        <p>This phone provides a super smooth visual experience when owning a sharp Dynamic Island screen with the new generation Super Retina XDR technology. Its performance is powerful with the Apple A16 Bionic processor, which helps stabilize all tasks. The 48MP rear camera cluster and many modern photography technologies bring impressive shooting quality and professional photography standards.
             
                         </p>
                         <p class="hidden lg:block">
-                            Nằm trong phân khúc cao cấp nhất hiện nay, chiếc điện thoại này đã và đang nhận được rất nhiều sự yêu thích từ người tiêu dùng Việt. Thế hệ  mới nhất này thu hút người dùng với kiểu dáng sang trọng, tinh tế từ màn hình Dynamic Island cùng hiệu năng cực đỉnh của chipset Apple A16 Bionic. Với nhiều đột phá mạnh mẽ, iPhone 14 Pro 128GB chắc chắn sẽ là phân khúc smartphone mạnh mẽ, sang trọng top đầu hiện nay mà bạn không nên bỏ qua nhé!
+                            Being in the most high-end segment today, this phone has been receiving a lot of love from Vietnamese consumers. This latest generation attracts users with a luxurious and sophisticated design from the Dynamic Island screen and the extreme performance of the Apple A16 Bionic chipset. With many strong breakthroughs, the iPhone 14 Pro 128GB will definitely be the top powerful and luxurious smartphone segment today that you should not ignore!
                         </p>
                     </div>
                 </div>
             </section>
             <section class="Review_product pb-10 px-5 lg:px-20">
-                <h1 style="font-weight: 500;" >Đánh giá sản phẩm</h1>
+                <h1 style="font-weight: 500;" >Product Reviews</h1>
                 <div class="lg:grid lg:grid-cols-12 gap-7">
                     <div class="col-span-5 flex flex-col justify-center item-center ml-4">
                        <div>
                        
                         <p class="font-bold">
-                            Hồ Tấn Anh
+                            Pham Hoai Vu
                         </p>
                         <p>
-                            Sản phẩm tốt lắm shop
+                            Good!
                         </p>
                         <div class="start">
                             <i class="fas fa-star color_star"></i>
@@ -378,7 +150,7 @@
                             Nguyễn Bá Đại
                         </p>
                         <p>
-                            Sản phẩm tốt lắm shop
+                            Good!
                         </p>
                         <div class="start">
                             <i class="fas fa-star color_star"></i>
@@ -393,7 +165,7 @@
                        <div #Comment>
                        </div>
                        <div class="flex flex-col lg:gap-3 lg:mt-5 mb-5">
-                        <label class="font-medium pb-2"  >Bình luận</label>
+                        <label class="font-medium pb-2"  >Comment</label>
                         <input [(ngModel)]="cmtInput" class="input lg:w-10/12 w-full" type="text">
                         <button (click)="handleCmt()" class="checkout lg:mt-0 p-3 mt-5 lg:w-24 w-full rounded-md hover:scale-105">Bình luận</button>
                        </div>
@@ -410,7 +182,7 @@
                                 <i class="fas fa-star color_star"></i>
                                 <i class="fas fa-star-half-alt color_star"></i>
                             </div>
-                            <p style="color:#0071e3;">1001 đánh giá</p>
+                            <p style="color:#0071e3;">1001 Reviews</p>
                         </div>
                         <div>
                             <div class="flex space-x-5  ">
@@ -480,7 +252,7 @@
                 
             </section>
             <section class="related_product pb-10 px-5 lg:px-12">
-                <h1 style="font-weight: 500;" >Sản phẩm liên quan</h1>
+                <h1 style="font-weight: 500;" >Related</h1>
                 
                 <div class="flex flex-wrap justify-center gap-5">
                     <!-- <ng-container *ngFor="let itemRec of dataProduct">
@@ -498,8 +270,8 @@
                 </div>
                 <div class="text-center mt-10">
 
-                    <button *ngIf="showMoreButton" (click)="xemthem()" class="  xemthem rounded-md">Xem thêm</button>
-                    <button *ngIf="!showMoreButton" (click)="thugon()" class="  xemthem rounded-md">Thu gọn</button>
+                    <button *ngIf="showMoreButton" (click)="xemthem()" class="  xemthem rounded-md">More</button>
+                    <button *ngIf="!showMoreButton" (click)="thugon()" class="  xemthem rounded-md">Collapse</button>
                 </div>
             </section>
         </div>
