@@ -2,15 +2,15 @@
     <main class=" mx-8">
         <div class="flex  justify-between  mt-5 lg:mt-0 ">
             <h1 class="lg:text-3xl font-normal ">
-                Sản Phẩm <span class="lg:text-xl active">> {{brand}}</span>
+                Product <span class="lg:text-xl active">> {{brand}}</span>
             </h1>
             <div class="flex items-center">
                
-                <button class="lg:text-lg btn"  [matMenuTriggerFor]="Sort">Xếp Theo Giá</button>
+                <button class="lg:text-lg btn"  [matMenuTriggerFor]="Sort">Sort by price</button>
                 <mat-menu #Sort="matMenu" class="  text-center rounded-md">
-                    <button  mat-menu-item (click)="sortItems('h2l')">Cao đến thấp</button>
+                    <button  mat-menu-item (click)="sortItems('h2l')">High to Low</button>
                   
-                    <button mat-menu-item (click)="sortItems('l2h')">Thấp đến cao</button>
+                    <button mat-menu-item (click)="sortItems('l2h')">Low to High</button>
                   </mat-menu>
                 </div>
           
@@ -19,7 +19,7 @@
         <section class="pt-4">
             <div class="grid grid-cols-1 gap-3 gap-y-10 lg:grid-cols-6 ">
                 <div class="hidden lg:block flex items-center justify-center">
-                    <p class="text-xl flex items-center gap-2 col-span-1">Lọc Theo  
+                    <p class="text-xl flex items-center gap-2 col-span-1">Sort by  
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
                             <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
                           </svg>
@@ -81,8 +81,7 @@
                 </form> 
             </div>
             <div class="lg:col-span-5">
-
-                <p class="text-xl"> Sản Phẩm</p>
+                <p class="text-xl"> Product</p>
                  <div class="flex flex-wrap lg:justify-start lg:ml-5  justify-center gap-5">
 
                     <ng-container  *ngFor="let item of productFilter | paginate : { itemsPerPage: tableSize,
@@ -98,8 +97,8 @@
                 <div class="text-center mt-5">
 
                     <pagination-controls
-                            previousLabel="Trước"
-                            nextLabel="Sau"
+                            previousLabel="Prev"
+                            nextLabel="Next"
                             (pageChange)="onTableDataChange($event)"
                             >
                             </pagination-controls>
@@ -150,7 +149,7 @@
                     </svg>
                     
                 </a> -->
-                <a class="addThis_item--icon" href="//zalo.me/0388754761" target="_blank" rel="nofollow noreferrer" aria-label="zalo">
+                <a class="addThis_item--icon" href="//zalo.me/0375908462" target="_blank" rel="nofollow noreferrer" aria-label="zalo">
                 <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<circle cx="22" cy="22" r="22" fill="url(#paint4_linear)"></circle>
 					<g clip-path="url(#clip0)">

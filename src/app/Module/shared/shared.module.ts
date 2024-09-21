@@ -14,6 +14,7 @@ import { PaymentCompletedComponent } from './components/payment-completed/paymen
 import { FormsModule } from '@angular/forms';
 import { DialogModule } from '@angular/cdk/dialog';
 import { ContactCompletedComponent } from './components/contact-completed/contact-completed.component';
+import { SearchProductComponent } from './components/navbar/search-product/search-product.component';
 
 
 
@@ -25,7 +26,8 @@ import { ContactCompletedComponent } from './components/contact-completed/contac
     CartItemComponent,
     CartItemCheckoutComponent,
     PaymentCompletedComponent,
-    ContactCompletedComponent
+    ContactCompletedComponent,
+    SearchProductComponent
   ],
   imports: [
     CommonModule,

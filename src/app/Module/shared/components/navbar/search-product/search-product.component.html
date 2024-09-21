@@ -1,0 +1,14 @@
+<div>
+  <input type="text" #searchInput (keyup.enter)="onSearch(searchInput.value)" placeholder="Tìm kiếm sản phẩm...">
+  <button (click)="onSearch(searchInput.value)">Tìm kiếm</button>
+  <div *ngIf="(products$ | async)?.length === 0">
+    Không có sản phẩm nào phù hợp với tìm kiếm của bạn.
+  </div>
+  <div class="product-container">
+    <div *ngFor="let product of products$ | async" class="product-item">
+      <h3>{{ product.title }}</h3>
+      <p>Giá: {{ product.discountedPrice | currency:'VND' }}</p>
+      <p>Màu: {{ product.color }}</p>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-export const dataProduct=[
+export const dataProduct=[ 
   {
       id:1,
       imageURL:"https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:80/plain/https://cellphones.com.vn/media/catalog/product/v/n/vn_iphone_15_pink_pdp_image_position-1a_pink_color_2.jpg",

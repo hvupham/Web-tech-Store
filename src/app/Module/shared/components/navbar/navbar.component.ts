@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import {MatDialog} from '@angular/material/dialog'
 import { AuthComponent } from 'src/app/Module/auth/auth.component';
-
+import { SearchProductComponent } from './search-product/search-product.component';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
