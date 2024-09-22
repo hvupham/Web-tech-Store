@@ -1,78 +1,53 @@
-<h1 class="text-3xl font-bold">User</h1>
-<table class="table-auto w-full">
-    <thead>
-      <tr>
-        <th class="px-4 py-2">ID</th>
-        <th class="px-4 py-2">Full Name</th>
-        <th class="px-4 py-2">Phone</th>
-        <th class="px-4 py-2">Address</th>
-        <th class="px-4 py-2">State</th>
-        <th class="px-4 py-2">Role</th>
-        <th class="px-4 py-2">Action</th>
-      </tr>
-    </thead>
-    <tbody>
-        @for(user of users; track user.id) {
+<div class="container mx-auto px-4">
+  <h1 class="text-3xl font-bold mb-6">User</h1>
+  <div class="overflow-x-auto">
+    <table class="w-full border-collapse">
+      <thead class="bg-gray-100">
         <tr>
-            <td class="border px-4 py-2">{{ user.id }}</td>
-            <td class="border px-4 py-2">{{ user.fullname }}</td>
-            <td class="border px-4 py-2">{{ user.phone_number }}</td>
-            <td class="border px-4 py-2">{{ user.address }}</td>
-            <td class="border px-4 py-2">{{ user.is_active ? 'Active' : 'Inactive' }}</td>
-            <td class="border px-4 py-2">{{ user.role.name }}</td>
-            <td class="border px-4 py-2">
-                <!-- <button class="py-2 px-4 rounded" :class="{
-                        'bg-red-500 hover:bg-red-700 text-white': user.is_active,
-                        'bg-green-500 hover:bg-green-700 text-white': !user.is_active
-                      }" (click)="toggleUserStatus(user)">
-                    {{ user.is_active ? 'Block User' : 'Unblock User' }}
-                </button> -->
-                <button class="btn btn-danger transition ease-in-out delay-150"  (click)="toggleUserStatus(user)">
-              <i class="fas fa-ban"></i>
-          </button>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2" (click)="resetPassword(user.id)">
-                    Reset Password
-                </button>
-            </td>
+          <th class="px-4 py-2 text-left">ID</th>
+          <th class="px-4 py-2 text-left">Full Name</th>
+          <th class="px-4 py-2 text-left">Phone</th>
+          <th class="px-4 py-2 text-left">Address</th>
+          <th class="px-4 py-2 text-left">State</th>
+          <th class="px-4 py-2 text-left">Role</th>
+          <th class="px-4 py-2 text-left">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(user of users; track user.id) {
+        <tr class="hover:bg-gray-50">
+          <td class="border px-4 py-2">{{ user.id }}</td>
+          <td class="border px-4 py-2">{{ user.fullname }}</td>
+          <td class="border px-4 py-2">{{ user.phone_number }}</td>
+          <td class="border px-4 py-2">{{ user.address }}</td>
+          <td class="border px-4 py-2">
+            <span 
+              class="px-2 py-1 rounded-full text-xs font-semibold"
+              [ngClass]="user.is_active ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'"
+            >
+              {{ user.is_active ? 'Active' : 'Inactive' }}
+            </span>
+          </td>
+          <td class="border px-4 py-2">{{ user.role.name }}</td>
+          <td class="border px-4 py-2">
+            <button 
+              class="text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+              [ngClass]="user.is_active ? 'bg-red-500 hover:bg-red-700' : 'bg-green-500 hover:bg-green-700'"
+              (click)="toggleUserStatus(user)"
+            >
+              <i class="fas fa-ban mr-2"></i>
+              {{ user.is_active ? 'Block' : 'Unblock' }}
+            </button>
+            <button 
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2 transition duration-300 ease-in-out"
+              (click)="resetPassword(user.id)"
+            >
+              Reset Password
+            </button>
+          </td>
         </tr>
         }
-    </tbody>
-  </table>
-
-<!-- <h1>User</h1>
-<table class="table table-striped">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Full Name</th>
-        <th>Phone</th>
-        <th>Address</th>
-        <th>State</th>
-        <th>Role</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-        @for(user of users; track user.id) {
-        <tr>
-            <td>{{ user.id }}</td>
-            <td>{{ user.fullname }}</td>
-            <td>{{ user.phone_number }}</td>
-            <td>{{ user.address }}</td>
-            <td>{{ user.is_active ? 'Active' : 'Inactive' }}</td>
-            <td>{{ user.role.name }}</td>
-            <td>
-                <button class="btn" [ngClass]="{
-                        'btn-danger': user.is_active,
-                        'btn-success': !user.is_active
-                      }" (click)="toggleUserStatus(user)">
-                    {{ user.is_active ? 'Block User' : 'Unblock User' }}
-                </button>
-                <button class="btn btn-primary ms-2" (click)="resetPassword(user.id)">
-                    Reset Password
-                </button>
-            </td>
-        </tr>
-        }
-    </tbody>
-  </table> -->
+      </tbody>
+    </table>
+  </div>
+</div>
