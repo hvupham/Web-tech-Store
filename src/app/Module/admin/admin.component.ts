@@ -29,7 +29,7 @@ export class AdminComponent implements OnInit {
     // Default router
     debugger
     if (this.router.url === '/admin') {
-      this.router.navigate(['/admin/orders']);
+      this.router.navigate(['/admin/categories']);
     }
    }  
   logout() {
@@ -41,7 +41,7 @@ export class AdminComponent implements OnInit {
   showAdminComponent(componentName: string): void {
     debugger
     if (componentName === 'orders') {
-      this.router.navigate(['/admin/orders']);
+      // this.router.navigate(['/admin/orders']);
     } else if (componentName === 'categories') {
       this.router.navigate(['/admin/categories']);
     } else if (componentName === 'products') {

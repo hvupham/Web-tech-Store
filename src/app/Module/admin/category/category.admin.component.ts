@@ -7,8 +7,6 @@ import { ApiResponse } from '../../../responses/api.response';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-
-
 @Component({
   selector: 'app-category-admin',
   templateUrl: './category.admin.component.html',
@@ -27,9 +25,9 @@ export class CategoryAdminComponent implements OnInit {
     private categoryService: CategoryService,    
     private router: Router,    
     ) {}
-    
     ngOnInit() {      
       this.getCategories(0, 100);
+      console.log('categories', this.categories);
     }
     getCategories(page: number, limit: number) {
       this.categoryService.getCategories(page, limit).subscribe({
