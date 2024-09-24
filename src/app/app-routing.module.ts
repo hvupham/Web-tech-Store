@@ -12,6 +12,8 @@ import { ContactComponent } from './Module/feture/components/contact/contact.com
 import { SigninComponent } from './Module/auth/signin/signin.component';
 import { SignupComponent } from './Module/auth/signup/signup.component';
 import { AdminComponent } from './Module/admin/admin.component';
+import { AdminGuardFn } from './guards/admin.guard';
+import { LoginComponent } from './Module/auth/login/login.component';
 const routes: Routes = [
   { path: '', component:HomeComponent},
   {path: 'checkout/payment/:id', component:PaymentComponent},
@@ -23,11 +25,13 @@ const routes: Routes = [
   {path: 'news-details/:id',component:NewsDetailsComponent},
   {path:'contact',component:ContactComponent},
   {path:'singin', component:SigninComponent},
-  {path:'singup', component:SignupComponent},
+  {path:'signup', component:SignupComponent},
+  {path:'login', component:LoginComponent},
+
   { 
     path: 'admin', 
     component: AdminComponent, 
-    // canActivate:[AdminGuardFn] 
+    canActivate:[AdminGuardFn] 
   },  
 ];
 

@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
-  islogin=true;
-  changeIslogin=()=>{
-    this.islogin=!this.islogin;
-  }
+  // islogin=true;
+  // changeIslogin=()=>{
+  //   this.islogin=!this.islogin;
+  // }
 }

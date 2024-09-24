@@ -9,9 +9,9 @@ import { RouterLinkActive, RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    SigninComponent,
-    SignupComponent,
-    AuthComponent
+    // SigninComponent,
+    // SignupComponent,
+    // AuthComponent
   ],
   imports: [
     CommonModule,
