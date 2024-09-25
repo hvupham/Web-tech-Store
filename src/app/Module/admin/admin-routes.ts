@@ -16,11 +16,7 @@ export const adminRoutes: Routes = [
     {
         path: 'admin',
         component: AdminComponent,
-        children: [
-            // {
-            //     path: 'orders',
-            //     component: OrderAdminComponent
-            // },            
+        children: [           
             {
                 path: 'products',
                 component: ProductAdminComponent
@@ -29,11 +25,6 @@ export const adminRoutes: Routes = [
                 path: 'categories',
                 component: CategoryAdminComponent
             },
-            //sub path
-            // {
-            //     path: 'orders/:id',
-            //     component: DetailOrderAdminComponent
-            // },
             {
                 path: 'products/update/:id',
                 component: UpdateProductAdminComponent
