@@ -13,7 +13,7 @@ import { SigninComponent } from './Module/auth/signin/signin.component';
 import { SignupComponent } from './Module/auth/signup/signup.component';
 import { AdminComponent } from './Module/admin/admin.component';
 import { AdminGuardFn } from './guards/admin.guard';
-import { LoginComponent } from './Module/auth/login/login.component';
+// import { LoginComponent } from './Module/auth/login/login.component';
 const routes: Routes = [
   { path: '', component:HomeComponent},
   {path: 'checkout/payment/:id', component:PaymentComponent},
@@ -26,7 +26,7 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'singin', component:SigninComponent},
   {path:'signup', component:SignupComponent},
-  {path:'login', component:LoginComponent},
+  // {path:'login', component:LoginComponent},
 
   { 
     path: 'admin', 
